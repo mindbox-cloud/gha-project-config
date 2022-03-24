@@ -65,7 +65,7 @@ if (!str.isBlank(instances)) {
                 url: `${baseServiceUrl}&environment=${environment}&instanceName=${instance}`,
                 auth: auth
             };
-            const fileName = `application.config.${str.decapitalize(environment)}-${str.decapitalize(instance)}`;
+            const fileName = `application.config.${environment.toLowerCase()}-${instance.toLowerCase()}`;
             const filePath = path.join(`${GITHUB_WORKSPACE}`, configsPath, fileName);
             downloadConfig(options, filePath);
         }
@@ -77,7 +77,7 @@ else {
             url: `${baseServiceUrl}&environment=${environment}`,
             auth: auth
         };
-        const fileName = `application.config.${str.decapitalize(environment)}`;
+        const fileName = `application.config.${environment.toLowerCase()}`;
         const filePath = path.join(`${GITHUB_WORKSPACE}`, configsPath, fileName);
         downloadConfig(options, filePath);
     }
