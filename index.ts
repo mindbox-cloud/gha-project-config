@@ -29,7 +29,7 @@ const login = getValue('login');
 const password = getValue('password');
 const project = getValue('project');
 
-const baseServiceUrl = `https://nexus-services.directcrm.ru/projects/configuration?projectSystemName=${project}`
+const baseServiceUrl = `https://nexus-services.mindbox.ru/projects/configuration?projectSystemName=${project}`
 const auth = {
     username: login,
     password: password
