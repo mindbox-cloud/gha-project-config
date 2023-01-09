@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Run the action for microservice
         uses: mindbox-moscow/gha-project-config@master
-        id: project-config        
+        id: project-config-mcs
         with:
           login: ${{ secrets.Nexus_Login }}
           password: ${{ secrets.Nexus_Password }}
@@ -19,7 +19,7 @@ jobs:
 
       - name: Run the action for project
         uses: mindbox-moscow/gha-project-config@master
-        id: project-config        
+        id: project-config-proj
         with:
           login: ${{ secrets.Nexus_Login }}
           password: ${{ secrets.Nexus_Password }}
